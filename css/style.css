@@ -14,94 +14,13 @@
 	padding: 0.5rem;
 }
 
-/*box-sizing and font sizing*/
-*,
-*::before,
-*::after{
-	box-sizing: inherit;
-}
 
-html {
-	box-sizing: border-box;
-
-	/* set font size for easy rem calculations
-	 * default document font siz = 16px, 1rem=16px, 100% =16px
-	 * (100%/16px)*10=62.5%, 1rem=10px, 62.5%=10px 
-	*/
-
-	font-size: 62.5%;
-	scroll-behavior: smooth;
-}
-
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness
- * To use the rem unit for size values, margin and padding.
- * Because rem is relative to the document size
- * When we scale up or down the font size on the down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
-
-/* em is the relative to the font size of the element, i.e. 2em means 2 times the size of the current font
- * The calculation is the following:
- * screem size divided by browser base font size, for example
- * a breakpoint at 980x
- * 980px/16px = 61.25em
-*/
-
-/* 1200px / 16px =75em */
-@media (max-width: 75em) {
-	html{
-		font-size: 60%;
-	}
-}
-
-/* 980px / 16px =61.25em */
-@media (max-width: 61.25em) {
-	html{
-		font-size: 58%;
-	}
-}
-
-/* 460px / 16px =28.75em */
-@media (max-width: 32.75em) {
-	html{
-		font-size: 50%;
-	}
-}
 
 /*Base style*/
 
 body {
 	font-family: sans-serif;
-	font-size: 1.8rem; /*18px*/
-	font-weight: 200;
-	line-height: 1.4;
 	color: var(--main-blue);
 }
 
-h1,
-h2 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 200;
-	text-align: center;
-}
 
-h1 {
-	font-size: 6rem;
-}
-
-h2 {
-	font-size: 4.2rem;
-}
-
-
-
-a {
-	text-decoration: none;
-	color: var(--main-white);
-}
-
-img {
-	display: block;
-	width: 100%;
-}
