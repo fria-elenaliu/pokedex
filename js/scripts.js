@@ -9,7 +9,8 @@ let pokemonList = [
 	{name:'Nidoran', height: 0.4, type: 'poison'},
 	{name:'Vulpix', height: 0.6, type: 'fire'},
 	{name:'Gigglypuff', height: 0.5, type: 'fairy'},
-	{name:'Raichu', height: 2.07, type:'electric'}
+	{name:'Raichu', height: 2.07, type:'electric'},
+	{name:'Pachirisu', height: 0.4, type:'electric'}
 	];
 
 let i=0;
@@ -17,7 +18,7 @@ let i=0;
  for (let i=0; i<pokemonList.length; i++){
 	if (pokemonList[i].height >1.0){
 		document.write('<li>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')'+' - Wow, that\'s big! </li>');
-	}else if(pokemonList[i].height <0.6){
+	}else if(pokemonList[i].height <0.5){
 		document.write('<li>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')'+' - Ohh, that\'s small! </li>');
 	}else{
  	document.write('<li>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') </li>');
