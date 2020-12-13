@@ -10,18 +10,17 @@ let pokemonList = [
 	{name:'Vulpix', height: 0.6, type: 'fire'},
 	{name:'Gigglypuff', height: 0.5, type: 'fairy'},
 	{name:'Raichu', height: 2.07, type:'electric'},
-	{name:'Pachirisu', height: 0.4, type:'electric'}
+	{name:'Pachirisu', height: 0.4, type:'electric'},
+	//{name:'Buneary', height: 1.4, type:'normal'}
 	];
 
-let i=0;
-
- for (let i=0; i<pokemonList.length; i++){
-	if (pokemonList[i].height >1.0){
-		document.write('<li>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')'+' - Wow, that\'s big! </li>');
-	}else if(pokemonList[i].height <0.5){
-		document.write('<li>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')'+' - Ohh, that\'s small! </li>');
+pokemonList.forEach(function(pokemon){
+	if (pokemon.height >1.0){
+		document.write('<li>' + pokemon.name + ' (height: ' + pokemon.height + ')'+' - Wow, that\'s big! </li>');
+	}else if(pokemon.height <0.5){
+		document.write('<li>' + pokemon.name + ' (height: ' + pokemon.height + ')'+' - Ohh, that\'s small! </li>');
 	}else{
- 	document.write('<li>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') </li>');
+ 	document.write('<li>' + pokemon.name + ' (height: ' + pokemon.height + ') </li>');
  	}
- }
+ });
 
