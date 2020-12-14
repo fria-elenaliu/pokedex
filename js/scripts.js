@@ -1,7 +1,3 @@
-/*let pokemonList1 = [];
-pokemonList1.name = ['Bulbasaur', 'Charmander', 'Nidoran', 'Vulpix', 'Jigglypuff'];
-pokemonList1.height= [0.7, 0.6, 0.4, 0.6, 0.5 ];
-pokemonList1.type= ['grass', 'fire', 'poison', 'fire', 'fairy'];*/
 
 let pokemonRepository = (function(){
 
