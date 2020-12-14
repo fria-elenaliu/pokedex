@@ -1,37 +1,121 @@
-/*setting up variables*/
 :root{
+	--main-radius: 5px;
+	--main-padding: 5px;
 	--main-white: #FfFfFf;
 	--main-yellow: #ffcc33;
 	--main-blue: #4a638c;
 	--main-gray: #4f4f59;
 	--main-seafoam: #74c9bf;
-
-}
-
-/*Base reset*/
-*{
-	margin: 1rem;
-	padding: 0.5rem;
 }
 
 
-
-/*Base style*/
-
-body {
-	font-family: sans-serif;
-	color: var(--main-blue);
+.container{
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 0.4fr 1fr 1fr 1fr;
+	grid-template-rows: 0.3fr 0.6fr 1.8fr 0.3fr;
+	grid-template-areas: 
+	"nav nav nav nav"
+	"sidebar main main main"
+	"sidebar content1 content2 content3"
+	"sidebar footer footer footer";
+	grid-gap: 0.3rem;
+	font-family: "Poppins", sans-serif;
+	font-weight:800;
+	text-align: center;
+	font-size: 16px;
+	text-transform:uppercase;
+	
 }
 
-.loop {
-	display: flex;
-	flex-direction: column;
+
+p{
+	text-align: left;
+
+}
+
+li{
+	font-weight: 580;
+	padding: var(--main-padding);
+	text-align: left;
+	text-transform: none;
+}
+
+nav{
+	background:#4d3e63;
+	grid-area: nav;
+	color:#eae5f8;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+	
+}
+
+main{
+	background:#c2b1ea;
+	grid-area: main;
+	color:#3d3258;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+}
+
+.sidebar{
+	background:#c2b1ea;
+	grid-area: sidebar;
+	color: #3d3258;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+	
+}
+
+
+.content1 {
+	background:#e0d8f4;
+	grid-area: content1;
+	color: #3d3258;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding]);
+}
+
+	
+
+.content2 {
+	background:#d6cbf1;
+	grid-area: content2;
+	color: #3d3258;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+	
+}
+
+.content3 {
+	background:#e0d8f4;
+	grid-area: content3;
+	color: #3d3258;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+}
+
+footer{
+	background: #5c4b84;
+	grid-area: footer;
+	color:#eae5f8;
+	border-radius: var(--main-radius);
+	padding: var(--main-padding);
+	
+}
+
+@media only screen and (max-width: 550px){
+	.container{
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.3fr 0.4fr 1fr 1.5fr 1.5fr 1.5fr 0.3fr;
+		grid-template-areas: 
+		"nav"
+		"sidebar"
+		"main"
+		"content1"
+		"content2"
+		"content3"
+		"footer";
+
 	}
-
-h1{
-	font-size: 1.1em;
-	color:var(--main-yellow);
-	text-decoration: underline;	
 }
-
-
