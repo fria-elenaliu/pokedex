@@ -127,7 +127,7 @@ main{
 	grid-area: content1;
 	color: #3d3258;
 	border-radius: var(--main-radius);
-	padding: var(--main-padding]);
+	padding: var(--main-padding);
 }
 
 	
